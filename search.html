@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{% if not_found %}
+  <div class="not-found">
+    <p>لـم يـتم ايـجـاد نتـائـج البحــث عـن :</p>
+    <span class="search-name">{{name}}</span>
+  </div>
+{% else %}
+  <div></div>
+    <div class="found">
+      <p>نتـائـج البحــث عـن :</p>
+      <span class="search-name">{{name}}</span>
+    </div>
+  </div>
+  <div class="container" >
+    {% for title, url, poster in contents %}
+    <div class="item">
+      <a href={{ url }}>
+        <div class="title">
+          <p>{{title}}</p>
+        </div>
+        <img src={{ poster }}>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+{% endif %}
+{% endblock %}

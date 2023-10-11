@@ -1,0 +1,29 @@
+{% extends "content.html" %}
+
+{% block content %}
+<section class="content">
+  <a class="poster" href="/movies/{{name}}">
+    <img src={{poster}}>
+  </a>
+  <div class="info">
+    <h2 class="title-rate">{{name}}</h2>
+    <div class="details">
+      {% for p in info %}
+        {% if p != "" %}
+        <p class="detail">{{p}}</p>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<section class="story">
+  <h3 class="story-t">قصة الفيلم</h3>
+  <p>
+      {{story}}
+  </p>
+</section>
+<section class="watch-server">
+  <h3 class="server-title">سيرفر المشاهده</h3>
+  <iframe class="iframe" name="player_iframe" src={{watch_server}} allowfullscreen="" scrolling="no" frameborder="0"></iframe>
+</section>
+{% endblock %}

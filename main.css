@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', 'sans-serif';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    width:100%;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+    direction: ltr;
+    background-color: #292929;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    top: 0;
+}
+
+.logo{
+    text-decoration: none;
+    color: #FF0000;
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #FF0000;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.navigation a:hover{
+    color: #9B0000;
+}
+.search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.form-group {
+    text-align: center;
+}
+
+fieldset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+legend {
+  padding: 0 5px;
+}
+
+.search-input {
+    width: 450px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.submit-container {
+    margin: 10px 0;
+}
+
+button {
+    padding: 9px 20px;
+    background-color: #FF0000;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    border: none;
+}
+
+button:hover {
+    background-color: #9B0000;
+}
+
+.search-input::placeholder {
+    font-family: 'Droid Arabic Naskh', Arial, sans-serif;
+}
+
+.container {
+  margin: 0 30px 100px;
+  background-color: #292929;
+  border: 0.2px solid #292929;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.item{
+  bakground: #292929;
+  min-height: 13.5em;
+  width: 10.5em;
+  max-width: 12em
+  max-height: 15em;
+  overflow: hidden;
+  border: 1px solid #393939;
+  border-radius: 10px;
+  margin: 20px;
+  transition: 0.5s ease;
+  box-shadow: 0px 0px 30px rgba(1 1 0 / 75%);
+}
+
+.item:hover, .item .title p{
+  transform: scale(1.03);
+}
+
+.item a {
+  text-decoration: none;
+  color: #FF0000;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+}
+
+.item .title{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff; 
+  padding: 10px;
+  font-weight: 700;
+  height:100%;
+  font-size: 0.8em;
+}
+
+.item:hover .title {
+  opacity: 1;
+}
+
+.soon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #292929;
+  color: #ffffff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer a {
+  padding-left: 20px;
+  font-size: 1.4em;
+}
+
+footer p{
+  padding-right: 20px;
+}
+
+
+@media (max-width: 768px){
+    header {
+        padding: 10px 14px;
+    }
+
+    .logo{
+        font-size: 0.8em;
+    }
+
+    .navigation a{
+      font-size: 0.6em;
+    }
+
+    .container {
+        margin: 0 15px 70px; 
+    }
+
+    .item {
+      height: 12.5em;
+      width: 9em;
+    }
+
+    .search-form {
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    fieldset {
+      width: 80%;
+      max-width: 100%;
+    }
+
+    .search-input {
+        width: 265px;
+    }
+
+    footer {
+      height: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+  .search-input {
+    width: 250px;
+    height: 35px;
+  }
+
+  button {
+    height: 35px;
+    padding: 5px 15px;
+  }
+
+  .item {
+    min-height: 12em;
+    width: 8em;
+  }
+}
+
+@media (max-width: 300px) {
+  .search-input {
+    width: 150px;
+  }
+
+  .button {
+    height: 25px;
+    padding: 2.5px 15px;
+  }
+
+  footer a{
+    font-size: 1em;
+    padding-left: 10px;
+  }
+  
+  footer p{
+    font-size: .9em;
+    padding-right: 10px;
+  }
+}

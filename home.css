@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+.recent {
+  font-family: 'Cairo', serif;
+  font-weight: 400;
+  height: 50px;
+  max-width: 100%;
+  font-size: 1.2em;
+  background-color: #292929;
+  margin: 15px 30px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border-right: 5px solid #FBB900;
+}
+
+@media (max-width: 768px), (max-width: 576px) {
+  .recent{
+  margin: 15px;
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>TV online</title>
+    {% endif %}
+    {% if styles %}
+    {% for style in styles %}
+    <link rel="stylesheet" href='{{ url_for("static", filename="css/"+style+".css") }}'>
+    {% endfor %}
+    {% endif %}
+</head>
+<body>
+    <header>
+    <a href="/home" class="logo">tv online</a>
+       <nav class="navigation">
+           <a href="https://t.me/Le_666_DEV_CH" target="_blank">Telegram</a>
+           <a href="mailto:tvonlineofficial11@gmail.com">Contact us</a>
+       </nav>
+    </header>
+    {% block content %} {% endblock %}
+    <footer>
+      <p>&copy; 2023 TV Online</p>
+      <div class="links">
+        <a>
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://t.me/Le_666_DEV_CH">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+      </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/e702d8cb58.js" crossorigin="anonymous"></script>
+    <script src={{ url_for("static", filename="js/main.js") }}></script>
+</body>
+</html>
